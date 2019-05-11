@@ -28,6 +28,7 @@ include ./fork.pug
 							option(value="ALPHABETICAL_DESCENDING" class="alphabetical") Alphabetical, reversed
 							option(value="DIFFICULTY_ASCENDING" class="difficulty") Difficulty
 							option(value="DIFFICULTY_DESCENDING" class="difficulty") Difficulty, reversed
+							option(value="LAST_UPDATED_ON" class="date") Date last updated
 					span order
 
 				.item.flex
@@ -62,6 +63,7 @@ include ./fork.pug
 							img(src=swag.images.jpeg alt=swag.name + " swag you can get")
 					p.description!=swag.description
 					a(href=swag.reference) Check it out
+					p last updated #{swag.dateAdded.substr(0,10).split('-')}
 
 	footer.flex
 		.item.flex
